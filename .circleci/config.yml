@@ -36,7 +36,7 @@ jobs:
 
   install-backend-dependencies:
     docker:
-    - imgage: circleci/node:13.8.0
+    - image: circleci/node:13.8.0
       - checkout
       - run:
           name: npm install
