@@ -35,8 +35,8 @@ commands:
 jobs:
 
   install-backend-dependencies:
-    executor: node
-    steps:
+    docker:
+    - imgage: circleci/node:13.8.0
       - checkout
       - run:
           name: npm install
@@ -48,7 +48,8 @@ jobs:
             - backend/node_modules
   
   install-frontend-dependencies:
-   executor: node
+   docker:
+    - image: circleci/node:13.8.0
    steps:
       - checkout
       - run:
@@ -62,7 +63,8 @@ jobs:
 
 
   build-frontend:
-    executor: node
+    docker:
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - attach_workspace:
