@@ -75,7 +75,7 @@ jobs:
           working_directory: ./frontend
           command: |
             npm run build
-            exit 1
+            
 
   build-backend:
     docker:
